@@ -1,0 +1,30 @@
+.main-wrapper {
+    width: 100%;
+}
+
+.content-holder {
+    width: 800px;
+    margin: 0 auto;
+    display: block;
+}
+
+.header {
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px dashed darkgrey;
+}
+
+.header h2 {
+    display: block;
+    text-align: center;
+}
+
+.main-content {
+
+}
+
+.footer {
+
+}

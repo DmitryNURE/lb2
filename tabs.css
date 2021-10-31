@@ -1,0 +1,58 @@
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 500px;
+    margin-top: 20px;
+}
+
+.tabs label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: bold;
+    transition: background ease 0.3s;
+    position: relative;
+}
+
+.tabs label:before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background: transparent;
+    top: 0;
+    left: 0;
+    transition: all ease 0.4s;
+}
+
+.tabs .tab {
+    order: 9;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: #fff;
+    padding: 20px;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+/*div + p – первый правый сосед: p на том же уровне вложенности, который идёт сразу после div (если есть).*/
+.tabs input[type="radio"]:checked + label {
+    background: #fff;
+}
+
+.tabs input[type="radio"]:checked + label:before {
+    background: #000;
+    width: 100%;
+}
+
+.tabs input[type="radio"]:checked + label + .tab {
+    display: block;
+}
